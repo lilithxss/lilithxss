@@ -1,7 +1,7 @@
 <div align="center">
   <p>I am the god of exploits :sparkles:</p>
   <p>Me chama no Discord para batermos um papo!</p>
-  <img src="https://discord.c99.nl/widget/theme-2/687017684030062627.png" />
+  <img src="https://discord.c99.nl/widget/theme-1/687017684030062627.png" />
 
   <p>Brincando na gangorra do JS:</p>
   <p>:key: Bypass Chegando... :computer: C#, C++, HTML e JS + CSS</p>
