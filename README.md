@@ -4,7 +4,7 @@
 
  <p>I am the god of exploits :sparkles:</p>
   <p><3</p>
-  <img src=" https://discord.c99.nl/widget/theme-2/687017684030062627.png" />
+  <img src="https://discord.c99.nl/widget/theme-2/687017684030062627.png" />
 
   <p>Brincando na gangorra do JS:</p>
   <p>:key: Bypass Chegando... :computer: C#, C++, HTML e JS + CSS</p>
