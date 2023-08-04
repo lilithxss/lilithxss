@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://imgur.com/a/zOOOd5u" alt="Banner"></a>
+<a href="https://imgur.com/a/zOOOd5u"></a>
 </p> 
   <p>I am the god of exploits :sparkles:</p>
   <p>Me chama no Discord para batermos um papo!</p>
