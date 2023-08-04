@@ -1,6 +1,5 @@
 <div align="center">
-<img hight="250" width="250" alt="GIF" align="center" src="https://github.com/lilithxss/lilithxss/blob/main/b6adbd103c1ca096d42559c9b717baf3.gif">
-</div>
+
 
   <p>I am the god of exploits :sparkles:</p>
   <p><3</p>
