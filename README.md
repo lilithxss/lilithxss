@@ -1,4 +1,6 @@
 <div align="center">
+<a href="https://www.edisonlee55.com"><img src="kita-ikuyo-rap.webp" alt="Banner"></a>
+</p> 
   <p>I am the god of exploits :sparkles:</p>
   <p>Me chama no Discord para batermos um papo!</p>
   <img src="https://discord.c99.nl/widget/theme-1/687017684030062627.png" />
